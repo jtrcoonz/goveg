@@ -1,0 +1,47 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+}
+.image-container {
+	box-sizing: border-box;
+	width: 100%;
+	background-size: cover;
+	height: 200px;
+	padding-top: 60px;
+	text-align: center;
+}
+
+#image-1 {
+	background-image: url("/Users/Jacob/Desktop/project-photos/goveg-search.jpg");
+}
+
+#image-2 {
+	background-image: url("/Users/Jacob/Desktop/project-photos/goveg-select.jpg");
+}
+
+#image-3 {
+	background-image: url("/Users/Jacob/Desktop/project-photos/goveg-build.jpg");
+}
+
+.lp-image {
+	width: 100%;
+	opacity: 0.5;
+}
+.lp-label {
+	padding: 5px;
+	/*margin-top: 180px;*/
+	text-align: center;
+	font-weight: 400;
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.8);
+
+}
+.lp-text {
+	text-align: center;
+	padding: 30px 10px;
+	font-weight: 300;
+}
+
+.bold-text {
+	font-weight: 500;
+}
