@@ -13,6 +13,119 @@
 </head>
 
 <body>
+	<div role="region" class="lp-main">
+		<img id="site-logo" src="/Users/Jacob/Desktop/project-photos/goveg-logo.svg" alt="vector logo of a leaf">
+		<header role="banner">
+			<p id="site-title">GoVeg</p>
+			<p id="site-tagline">Healthy eating, simple living</p>
+		</header>
+		<form role="main" class="search-form">
+			<div class="search-param">
+				<label for="query" class="param-label">What's on the menu?</label>
+				<input type="search" id="query" name="query" class="param-input" placeholder="Burger">
+			</div>
+			<div class="cuisine-param">
+				<label for="cuisine-select" class="param-label">Cuisine</label>
+				<select id="cuisine-select" class="param-input">
+					<option value="" id="cuisine-placeholder">- Please select an option -</option>
+					<option value="african">African</option>
+					<option value="american">American</option>
+					<option value="british">British</option>
+					<option value="cajun">Cajun</option>
+					<option value="caribbean">Caribbean</option>
+					<option value="chinese">Chinese</option>
+					<option value="eastern european">Eastern European</option>
+					<option value="french">French</option>
+					<option value="german">German</option>
+					<option value="greek">Greek</option>
+					<option value="indian">Indian</option>
+					<option value="irish">Irish</option>
+					<option value="italian">Italian</option>
+					<option value="japanese">Japanese</option>
+					<option value="jewish">Jewish</option>
+					<option value="korean">Korean</option>
+					<option value="latin american">Latin American</option>
+					<option value="mexican">Mexican</option>
+					<option value="middle eastern">Middle Eastern</option>
+					<option value="nordic">Nordic</option>
+					<option value="southern">Southern</option>
+					<option value="spanish">Spanish</option>
+					<option value="thai">Thai</option>
+					<option value="vietnamese">Vietnamese</option>
+				</select>
+			</div>
+			<div class="diet-param">
+				<label for="diet-select" class="param-label">Diet</label>
+				<select id="diet-select" class="param-input">
+					<option value="" id="diet-placeholder">- Please select an option -</option>
+					<option value="lacto vegetarian">Lacto Vegetarian</option>
+					<option value="ovo vegetarian">Ovo Vegetarian</option>
+					<option value="paleo">Paleo</option>
+					<option value="pescetarian">Pescetarian</option>
+					<option value="primal">Primal</option>
+					<option value="vegan">Vegan</option>
+					<option value="vegetarian">Vegetarian</option>
+				</select>
+			</div>
+			<h2 class="param-label">Intolerances</h2>
+			<div class="intolerances-param">
+				<div class="checkbox-column-33">
+					<li>
+						<input type="checkbox" id="dairy" name="intolerance" value="dairy">
+						<label for="dairy">Dairy</label>
+					</li>
+					<li>
+						<input type="checkbox" id="egg" name="intolerance" value="egg">
+						<label for="egg">Egg</label>
+					</li>
+					<li>
+						<input type="checkbox" id="gluten" name="intolerance" value="gluten">
+						<label for="gluten">Gluten</label>
+					</li>
+				</div>
+				<div class="checkbox-column-33">
+					<li>
+						<input type="checkbox" id="peanut" name="intolerance" value="peanut">
+						<label for="peanut">Peanut</label>
+					</li>
+					<li>
+						<input type="checkbox" id="sesame" name="intolerance" value="sesame">
+						<label for="sesame">Sesame</label>
+					</li>
+					<li>
+						<input type="checkbox" id="seafood" name="intolerance" value="seafood">
+						<label for="seafood">Seafood</label>
+					</li>
+				</div>
+				<div class="checkbox-column-33">
+					<li>
+						<input type="checkbox" id="shellfish" name="intolerance" value="shellfish">
+						<label for="shellfish">Shellfish</label>
+					</li>
+					<li>
+						<input type="checkbox" id="soy" name="intolerance" value="soy">
+						<label for="soy">Soy</label>
+					</li>
+					<li>
+						<input type="checkbox" id="sulfite" name="intolerance" value="sulfite">
+						<label for="sulfite">Sulfite</label>
+					</li>
+				</div>
+				<div class="checkbox-column-33">
+					<li>
+						<input type="checkbox" id="tree-nut" name="intolerance" value="tree nut">
+						<label for="tree-nut">Tree Nut</label>
+					</li>
+					<li>
+						<input type="checkbox" id="wheat" name="intolerance" value="wheat">
+						<label for="wheat">Wheat</label>
+					</li>
+				</div>
+			</div>
+			<input type="submit" value="GoVeg!" id="form-submit">
+		</form>
+	</div>
+
 	<div role="region" class="lp-section">
 		<div class="image-container" id="image-1">
 			<h2 class="lp-label">Search</h2>
@@ -26,12 +139,12 @@
 		</div>
 		<p class="lp-text">Choose your perfect dish using the extracted information from each recipe. Make your selection based on <span class="bold-text">prep and cook times, dietary restrictions, ingredients, cuisine, cooking instructions and more!</span></p>
 	</div>
+
+	<div role="region" class="lp-section">
 		<div class="image-container" id="image-3">
 			<h2 class="lp-label">Build</h2>
 		</div>
 		<p class="lp-text">After choosing your recipe, <span class="bold-text">visit the website</span>, or immediately extract and <span class="bold-text">add the ingredients to the GoVeg shopping list</span>. Save the list via email or text to access it later. Happy shopping!</p>
-	<div role="region" class="lp-section">
-
 	</div>
 </body>
 </html>
