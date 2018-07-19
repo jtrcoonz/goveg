@@ -37,6 +37,9 @@ header {
 }
 .search-form {
   margin-top: 20px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 500%;
 }
 .param-label {
   display: block;
@@ -50,7 +53,7 @@ header {
   margin: 0 auto;
   margin-top: 5px;
   margin-bottom: 30px;
-  width: 90%;
+  width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 4px;
@@ -59,7 +62,6 @@ header {
   padding-left: 15px;
   color: rgba(13, 35, 23, 1);
   background-color: white;
-  max-width: 1030px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -81,7 +83,7 @@ header {
 .checkbox-column-33 li {
   display: block;
   float: left;
-  width: 33%;
+  width: 100%;
   margin-bottom: 10px;
   font-size: 18px;
   color: rgba(13, 35, 23, 1);
@@ -140,15 +142,13 @@ header {
   font-weight: 500;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 335px) {
+@media only screen and (min-width: 335px) {
   .checkbox-column-33 li {
-    width: 100%;
+    width: 33%;
   }
 }
+
 @media only screen and (min-width: 1030px) {
-  .search-form {
-    margin: 0 auto;
-  }
   .lp-sections {
     background: linear-gradient(rgba(27, 244, 127, 0.1), rgba(27, 244, 127, 0));
   }

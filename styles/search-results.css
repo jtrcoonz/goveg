@@ -1,76 +1,82 @@
-*, html {
-	margin: 0;
-	padding: 0;
-	border: 0;
+*,
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 body {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	letter-spacing: 0.5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 .non-linear-container {
-	height: 90px;
-	width: 100%;
-	background-color: rgba(27, 244, 127, 1);
-	margin-bottom: 20px;
+  height: 90px;
+  width: 100%;
+  background-color: rgba(27, 244, 127, 1);
+  margin-bottom: 20px;
 }
 header {
-	margin-left: 75px;
-	padding-top: 25px;
-	padding-bottom: 15px;
-	margin-bottom: 40px;
+  margin-left: 75px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
 }
 #site-logo {
-	position: absolute;
-	left: 25px;
-	top: 15px;
+  position: absolute;
+  left: 25px;
+  top: 15px;
 }
 #site-title {
-	font-size: 30px;
-	color: white;
+  font-size: 30px;
+  color: white;
 }
 #site-tagline {
-	font-weight: 200;
-	font-size: 16px;
-	color: white;
-	margin-left: 30px;
+  font-weight: 200;
+  font-size: 16px;
+  color: white;
+  margin-left: 30px;
 }
 .search-result {
-	text-align: center;
-	width: 90%;
-	margin: 0 auto;	
+  width: 90%;
+  margin: 30px auto;
+  max-width: 600px;
+}
+.search-result > h2 {
+  text-align: center;
 }
 .result-title {
-	color: rgba(27, 244, 127, 1);
-	font-weight: 400;
-	font-size: 24px;
-	margin-bottom: 10px;
+  color: rgba(27, 244, 127, 1);
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
+
 .image-container {
-	width: 49%;
-	display: inline-block;
-	box-sizing: border-box;
-	text-align: right;
+  width: 20%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.image-container > img {
+  width: 100%;
 }
 .info-container {
-	width: 49%;
-	display: inline-block;
-	box-sizing: border-box;
-	text-align: left;
-	height: 100%;
-	float: right;
+  width: 80%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: left;
+  float: right;
+  height: 100%;
+  padding-left: 20px;
 }
 .info-label {
-	color: rgba(27, 244, 127, 1);
+  color: rgba(27, 244, 127, 1);
+}
+.clear {
+  clear: both;
 }
 
-
-
-
-
-
-
-
-
-
-
+@media (min-width: 500px) {
+  .search-result {
+    width: 70%;
+  }
+}
