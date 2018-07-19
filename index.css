@@ -13,16 +13,16 @@ body {
 	height: 100%;
 	background: linear-gradient(rgba(27, 244, 127, 1), rgba(27, 244, 127, 0.1));
 }
-#site-logo {
-	position: absolute;
-	left: 25px;
-	top: 15px;
-}
 header {
 	margin-left: 75px;
 	padding-top: 25px;
 	padding-bottom: 15px;
 	margin-bottom: 40px;
+}
+#site-logo {
+	position: absolute;
+	left: 25px;
+	top: 15px;
 }
 #site-title {
 	font-size: 30px;
@@ -152,11 +152,6 @@ header {
 		background: linear-gradient(rgba(27, 244, 127, 0.1), rgba(27, 244, 127, 0));
 	}
 }
-
-
-
-
-
 
 
 
