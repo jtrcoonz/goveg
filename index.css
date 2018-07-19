@@ -58,6 +58,10 @@ header {
 	padding-left: 15px;
 	color: rgba(13, 35, 23, 1);
 	background-color: white;
+	max-width: 1030px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 ::placeholder {
 	color: rgba(188, 188, 188, 1);
@@ -71,6 +75,7 @@ header {
 	margin: 0 auto;
 	margin-bottom: 160px;
 	margin-top: 3px;
+	max-width: 1030px;
 }
 .checkbox-column-33 li {
 	display: block;
@@ -79,9 +84,6 @@ header {
 	margin-bottom: 10px;
 	font-size: 18px;
 	color: rgba(13, 35, 23, 1);
-}
-li > input {
-	background-color: white;
 }
 #form-submit {
 	display: block;
@@ -97,14 +99,17 @@ li > input {
 	border-radius: 4px;
 	font-weight: 250;
 	letter-spacing: 1px;
+	max-width: 200px;
 }
 .image-container {
+	margin: 0 auto;
 	box-sizing: border-box;
 	width: 100%;
 	background-size: cover;
 	height: 200px;
 	padding-top: 70px;
 	text-align: center;
+	max-width: 1030px;
 }
 #image-1 {
 	background-image: url("/Users/Jacob/Desktop/project-photos/goveg-search.png");
@@ -127,7 +132,35 @@ li > input {
 	text-align: center;
 	padding: 30px 10px;
 	font-weight: 300;
+	max-width: 1030px;
+	margin: 0 auto;
 }
 .bold-text {
 	font-weight: 500;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 335px) {
+	.checkbox-column-33 li {
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 1030px) {
+	.search-form {
+		margin: 0 auto;
+	}
+	.lp-sections {
+		background: linear-gradient(rgba(27, 244, 127, 0.1), rgba(27, 244, 127, 0));
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
