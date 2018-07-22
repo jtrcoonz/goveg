@@ -25,6 +25,8 @@ header {
   position: absolute;
   left: 25px;
   top: 15px;
+  padding-right: 280px;
+  padding-bottom: 20px;
 }
 #site-title {
   font-size: 30px;
@@ -74,9 +76,29 @@ header {
 .clear {
   clear: both;
 }
+.nav-buttons {
+  text-align: center;
+  width: 100%;
+}
+.button-style {
+  font-size: 26px;
+  color: white;
+  background-color: rgba(27, 244, 127, 1);
+  margin: 20px 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  font-weight: 250;
+  letter-spacing: 1px;
+  display: inline-block;
+  width: 45%;
+  max-width: 290px;
+}
 
-@media (min-width: 500px) {
-  .search-result {
-    width: 70%;
-  }
+#back-button {
+  margin-right: 5px;
+}
+
+#next-button {
+  margin-left: 5px;
 }

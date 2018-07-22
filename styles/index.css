@@ -24,6 +24,8 @@ header {
   position: absolute;
   left: 25px;
   top: 15px;
+  padding-right: 280px;
+  padding-bottom: 20px;
 }
 #site-title {
   font-size: 30px;
@@ -142,7 +144,7 @@ header {
   font-weight: 500;
 }
 
-@media only screen and (min-width: 335px) {
+@media only screen and (min-width: 370px) {
   .checkbox-column-33 li {
     width: 33%;
   }
