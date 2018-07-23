@@ -1,8 +1,5 @@
-*,
-html {
+*, html {
   margin: 0;
-  padding: 0;
-  border: 0;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -25,18 +22,13 @@ header {
   position: absolute;
   left: 25px;
   top: 15px;
-  padding-right: 280px;
-  padding-bottom: 20px;
 }
 #site-title {
   font-size: 30px;
   color: white;
 }
 #site-tagline {
-  font-weight: 200;
-  font-size: 16px;
-  color: white;
-  margin-left: 30px;
+  display: none;
 }
 .search-result {
   width: 90%;
@@ -94,11 +86,35 @@ header {
   width: 45%;
   max-width: 290px;
 }
-
 #back-button {
   margin-right: 5px;
 }
-
 #next-button {
   margin-left: 5px;
 }
+@media only screen and (min-width: 350px) {
+  #site-logo {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    padding-right: 280px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 345px) {
+  #site-tagline {
+    font-weight: 200;
+    font-size: 16px;
+    color: white;
+    margin-left: 30px;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+

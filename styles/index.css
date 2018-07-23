@@ -1,8 +1,5 @@
-*,
-html {
+*, html {
   margin: 0;
-  padding: 0;
-  border: 0;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -24,8 +21,6 @@ header {
   position: absolute;
   left: 25px;
   top: 15px;
-  padding-right: 280px;
-  padding-bottom: 20px;
 }
 #site-title {
   font-size: 30px;
@@ -153,5 +148,15 @@ header {
 @media only screen and (min-width: 1030px) {
   .lp-sections {
     background: linear-gradient(rgba(27, 244, 127, 0.1), rgba(27, 244, 127, 0));
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  #site-logo {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    padding-right: 280px;
+    padding-bottom: 20px;
   }
 }
