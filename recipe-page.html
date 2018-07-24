@@ -11,8 +11,8 @@
 </head>
 
 <body>
-	<div class="non-linear-container">
-		<header role="banner">
+	<div class="non-linear-container" role="banner">
+		<header>
 			<a href="index.html">
 				<img id="site-logo" src="img/goveg-logo.svg" alt="vector logo of a leaf">
 			</a>
@@ -21,7 +21,7 @@
 		</header>
 	</div>
 
-	<div class="search-result" role="region">
+	<div class="search-result" role="main">
 		<h2 class="result-title">Veggie Burger 4</h2>
 		<div class="image-container">
 			<img src="img/veggie-burger-4.svg" alt="a veggie burger" class="result-image">
@@ -37,8 +37,8 @@
 		<div class="clear"></div>
 	</div>
 
-	<div class="ingredients-steps-container">
-		<div class="ingredients-container" role="region">
+	<div class="ingredients-steps-container" role="region">
+		<div class="ingredients-container">
 			<div class="ingredients-heading-container">
 				<h2 class="ingredients-heading">Ingredients</h2>
 			</div>
@@ -54,8 +54,7 @@
 				</ul>
 			</div>
 		</div>
-	
-		<div class="steps-container" role="region">
+		<div class="steps-container">
 			<div class="steps-heading-container">
 				<h2 class="steps-heading">Steps</h2>
 			</div>
@@ -69,17 +68,21 @@
 				</ol>
 			</div>
 		</div>
+		<div class="clear"></div>
 	</div>
-	<div class="clear"></div>
 	
-	<div class="nav-buttons" role="navigation">
-		<button class="button-style" id="back-button" type="button" id="#">Visit Website</button>
-		<button class="button-style" id="next-button" type="button" id="#">+ Shopping List</button>
+	
+	<div role="navigation">
+		<div class="nav-buttons">
+			<button class="button-style" type="button">Visit Website</button>
+			<button class="button-style" type="button">+ Shopping List</button>
+		</div>
+		<div class="nav-buttons">
+			<button class="button-style-2" id="return-button" type="button">< Return</button>
+		</div>
 	</div>
 
-	<div class="nav-buttons" id="bottom-button" role="navigation">
-		<button class="button-style-2" type="button" id="#">< Return</button>
-	</div>
+	<div class="footer-container" role="contentinfo"></div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>

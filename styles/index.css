@@ -138,19 +138,22 @@ header {
 .bold-text {
   font-weight: 500;
 }
-
+.footer-container {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(27, 244, 127, 1);
+  margin-top: 30px;
+}
 @media only screen and (min-width: 370px) {
   .checkbox-column-33 li {
     width: 33%;
   }
 }
-
 @media only screen and (min-width: 1030px) {
   .lp-sections {
     background: linear-gradient(rgba(27, 244, 127, 0.1), rgba(27, 244, 127, 0));
   }
 }
-
 @media only screen and (min-width: 350px) {
   #site-logo {
     position: absolute;
