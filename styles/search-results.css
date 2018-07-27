@@ -38,6 +38,9 @@ header {
   margin: 30px auto;
   max-width: 600px;
 }
+.search-result:hover {
+  border: 1px solid black;
+}
 .search-result > h2 {
   text-align: center;
 }

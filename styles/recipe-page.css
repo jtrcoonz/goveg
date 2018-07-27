@@ -34,11 +34,11 @@ header {
 #site-tagline {
   display: none;
 }
-.search-result {
+.search-result-final {
   margin: 30px auto;
   max-width: 350px;
 }
-.search-result > h2 {
+.search-result-final > h2 {
   text-align: center;
 }
 .result-title {

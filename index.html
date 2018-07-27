@@ -8,146 +8,286 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 	<link href="styles/index.css" rel="stylesheet" type="text/css">
+	<link href="styles/search-results.css" rel="stylesheet" type="text/css">
+	<link href="styles/recipe-page.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<div class="lp-main" role="main">
-		<header role="banner">
-			<a href="index.html">
-				<img id="site-logo" src="img/goveg-logo.svg" alt="vector logo of a leaf">
-			</a>
-			<p id="site-title">GoVeg</p>
-			<p id="site-tagline">Healthy eating, simple living</p>
-		</header>
-		<form class="search-form" role="form">
-			<div class="search-param">
-				<label for="query" class="param-label">What's on the menu?</label>
-				<input type="search" id="query" name="query" class="param-input" placeholder="Burger">
-			</div>
-			<div class="cuisine-param">
-				<label for="cuisine-select" class="param-label">Cuisine</label>
-				<select id="cuisine-select" class="param-input">
-					<option value="" id="cuisine-placeholder">- Please select an option -</option>
-					<option value="african">African</option>
-					<option value="american">American</option>
-					<option value="british">British</option>
-					<option value="cajun">Cajun</option>
-					<option value="caribbean">Caribbean</option>
-					<option value="chinese">Chinese</option>
-					<option value="eastern european">Eastern European</option>
-					<option value="french">French</option>
-					<option value="german">German</option>
-					<option value="greek">Greek</option>
-					<option value="indian">Indian</option>
-					<option value="irish">Irish</option>
-					<option value="italian">Italian</option>
-					<option value="japanese">Japanese</option>
-					<option value="jewish">Jewish</option>
-					<option value="korean">Korean</option>
-					<option value="latin american">Latin American</option>
-					<option value="mexican">Mexican</option>
-					<option value="middle eastern">Middle Eastern</option>
-					<option value="nordic">Nordic</option>
-					<option value="southern">Southern</option>
-					<option value="spanish">Spanish</option>
-					<option value="thai">Thai</option>
-					<option value="vietnamese">Vietnamese</option>
-				</select>
-			</div>
-			<div class="diet-param">
-				<label for="diet-select" class="param-label">Diet</label>
-				<select id="diet-select" class="param-input">
-					<option value="" id="diet-placeholder">- Please select an option -</option>
-					<option value="lacto vegetarian">Lacto Vegetarian</option>
-					<option value="ovo vegetarian">Ovo Vegetarian</option>
-					<option value="paleo">Paleo</option>
-					<option value="pescetarian">Pescetarian</option>
-					<option value="primal">Primal</option>
-					<option value="vegan">Vegan</option>
-					<option value="vegetarian">Vegetarian</option>
-				</select>
-			</div>
-			<h2 class="param-label">Intolerances</h2>
-			<div class="intolerances-param">
-				<div class="checkbox-column-33">
-					<li>
-						<input type="checkbox" id="dairy" name="intolerance" value="dairy">
-						<label for="dairy">Dairy</label>
-					</li>
-					<li>
-						<input type="checkbox" id="egg" name="intolerance" value="egg">
-						<label for="egg">Egg</label>
-					</li>
-					<li>
-						<input type="checkbox" id="gluten" name="intolerance" value="gluten">
-						<label for="gluten">Gluten</label>
-					</li>
+	<div id="page-1">
+		<div class="lp-main" role="main">
+			<header role="banner">
+				<a href="index.html">
+					<img id="site-logo" src="img/goveg-logo.svg" alt="vector logo of a leaf">
+				</a>
+				<p id="site-title">GoVeg</p>
+				<p id="site-tagline">Healthy eating, simple living</p>
+			</header>
+			<form class="search-form" role="form">
+				<div class="search-param">
+					<label for="query" class="param-label">What's on the menu?</label>
+					<input type="search" id="query" name="query" class="param-input" placeholder="Burger">
 				</div>
-				<div class="checkbox-column-33">
-					<li>
-						<input type="checkbox" id="peanut" name="intolerance" value="peanut">
-						<label for="peanut">Peanut</label>
-					</li>
-					<li>
-						<input type="checkbox" id="sesame" name="intolerance" value="sesame">
-						<label for="sesame">Sesame</label>
-					</li>
-					<li>
-						<input type="checkbox" id="seafood" name="intolerance" value="seafood">
-						<label for="seafood">Seafood</label>
-					</li>
+				<div class="cuisine-param">
+					<label for="cuisine-select" class="param-label">Cuisine</label>
+					<select id="cuisine-select" class="param-input">
+						<option value="" id="cuisine-placeholder">- Please select an option -</option>
+						<option value="african">African</option>
+						<option value="american">American</option>
+						<option value="british">British</option>
+						<option value="cajun">Cajun</option>
+						<option value="caribbean">Caribbean</option>
+						<option value="chinese">Chinese</option>
+						<option value="eastern european">Eastern European</option>
+						<option value="french">French</option>
+						<option value="german">German</option>
+						<option value="greek">Greek</option>
+						<option value="indian">Indian</option>
+						<option value="irish">Irish</option>
+						<option value="italian">Italian</option>
+						<option value="japanese">Japanese</option>
+						<option value="jewish">Jewish</option>
+						<option value="korean">Korean</option>
+						<option value="latin american">Latin American</option>
+						<option value="mexican">Mexican</option>
+						<option value="middle eastern">Middle Eastern</option>
+						<option value="nordic">Nordic</option>
+						<option value="southern">Southern</option>
+						<option value="spanish">Spanish</option>
+						<option value="thai">Thai</option>
+						<option value="vietnamese">Vietnamese</option>
+					</select>
 				</div>
-				<div class="checkbox-column-33">
-					<li>
-						<input type="checkbox" id="shellfish" name="intolerance" value="shellfish">
-						<label for="shellfish">Shellfish</label>
-					</li>
-					<li>
-						<input type="checkbox" id="soy" name="intolerance" value="soy">
-						<label for="soy">Soy</label>
-					</li>
-					<li>
-						<input type="checkbox" id="sulfite" name="intolerance" value="sulfite">
-						<label for="sulfite">Sulfite</label>
-					</li>
+				<div class="diet-param">
+					<label for="diet-select" class="param-label">Diet</label>
+					<select id="diet-select" class="param-input">
+						<option value="" id="diet-placeholder">- Please select an option -</option>
+						<option value="lacto vegetarian">Lacto Vegetarian</option>
+						<option value="ovo vegetarian">Ovo Vegetarian</option>
+						<option value="paleo">Paleo</option>
+						<option value="pescetarian">Pescetarian</option>
+						<option value="primal">Primal</option>
+						<option value="vegan">Vegan</option>
+						<option value="vegetarian">Vegetarian</option>
+					</select>
 				</div>
-				<div class="checkbox-column-33">
-					<li>
-						<input type="checkbox" id="tree-nut" name="intolerance" value="tree nut">
-						<label for="tree-nut">Tree Nut</label>
-					</li>
-					<li>
-						<input type="checkbox" id="wheat" name="intolerance" value="wheat">
-						<label for="wheat">Wheat</label>
-					</li>
+				<h2 class="param-label">Intolerances</h2>
+				<div class="intolerances-param">
+					<div class="checkbox-column-33">
+						<li>
+							<input type="checkbox" id="dairy" name="intolerance" value="dairy">
+							<label for="dairy">Dairy</label>
+						</li>
+						<li>
+							<input type="checkbox" id="egg" name="intolerance" value="egg">
+							<label for="egg">Egg</label>
+						</li>
+						<li>
+							<input type="checkbox" id="gluten" name="intolerance" value="gluten">
+							<label for="gluten">Gluten</label>
+						</li>
+					</div>
+					<div class="checkbox-column-33">
+						<li>
+							<input type="checkbox" id="peanut" name="intolerance" value="peanut">
+							<label for="peanut">Peanut</label>
+						</li>
+						<li>
+							<input type="checkbox" id="sesame" name="intolerance" value="sesame">
+							<label for="sesame">Sesame</label>
+						</li>
+						<li>
+							<input type="checkbox" id="seafood" name="intolerance" value="seafood">
+							<label for="seafood">Seafood</label>
+						</li>
+					</div>
+					<div class="checkbox-column-33">
+						<li>
+							<input type="checkbox" id="shellfish" name="intolerance" value="shellfish">
+							<label for="shellfish">Shellfish</label>
+						</li>
+						<li>
+							<input type="checkbox" id="soy" name="intolerance" value="soy">
+							<label for="soy">Soy</label>
+						</li>
+						<li>
+							<input type="checkbox" id="sulfite" name="intolerance" value="sulfite">
+							<label for="sulfite">Sulfite</label>
+						</li>
+					</div>
+					<div class="checkbox-column-33">
+						<li>
+							<input type="checkbox" id="tree-nut" name="intolerance" value="tree nut">
+							<label for="tree-nut">Tree Nut</label>
+						</li>
+						<li>
+							<input type="checkbox" id="wheat" name="intolerance" value="wheat">
+							<label for="wheat">Wheat</label>
+						</li>
+					</div>
 				</div>
+				<input type="submit" value="GoVeg!" id="form-submit">
+			</form>
+		</div>
+
+		<div class="lp-sections" role="region">
+			<div class="lp-section">
+				<div class="image-container" id="image-1">
+					<h2 class="lp-label">Search</h2>
+				</div>
+				<p class="lp-text">Search from over <span class="bold-text">360,000 recipes</span> and <span class="bold-text">open source recipe databases</span> to find the perfect meal for the perfect occasion. Refine your searches based on your <span class="bold-text">desired cuisine, dietary restrictions, and food intolerances.</span></p>
 			</div>
-			<input type="submit" value="GoVeg!" id="form-submit">
-		</form>
+			<div class="lp-section">
+				<div class="image-container" id="image-2">
+					<h2 class="lp-label">Select</h2>
+				</div>
+				<p class="lp-text">Choose your perfect dish using the extracted information from each recipe. Make your selection based on <span class="bold-text">prep and cook times, dietary restrictions, ingredients, cuisine, cooking instructions and more!</span></p>
+			</div>
+			<div class="lp-section">
+				<div class="image-container" id="image-3">
+					<h2 class="lp-label">Build</h2>
+				</div>
+				<p class="lp-text">After choosing your recipe, <span class="bold-text">visit the website</span>, or immediately extract and <span class="bold-text">add the ingredients to the GoVeg shopping list</span>. Save the list via email or text to access it later. Happy shopping!</p>
+			</div>
+		</div>
+
+		<div class="footer-container" role="contentinfo"></div>
 	</div>
 
-	<div class="lp-sections" role="region">
-		<div class="lp-section">
-			<div class="image-container" id="image-1">
-				<h2 class="lp-label">Search</h2>
-			</div>
-			<p class="lp-text">Search from over <span class="bold-text">360,000 recipes</span> and <span class="bold-text">open source recipe databases</span> to find the perfect meal for the perfect occasion. Refine your searches based on your <span class="bold-text">desired cuisine, dietary restrictions, and food intolerances.</span></p>
+	<div id="page-2" hidden>
+		<div class="non-linear-container" role="banner">
+			<header>
+				<a href="index.html">
+					<img id="site-logo" src="img/goveg-logo.svg" alt="vector logo of a leaf">
+				</a>
+				<p id="site-title">GoVeg</p>
+				<p id="site-tagline">Healthy eating, simple living</p>
+			</header>
 		</div>
-		<div class="lp-section">
-			<div class="image-container" id="image-2">
-				<h2 class="lp-label">Select</h2>
+
+		<div class="search-result" role="region">
+			<h2 class="result-title">Veggie Burger 4</h2>
+			<div class="image-container">
+				<img src="img/veggie-burger-4.svg" alt="a veggie burger" class="result-image">
 			</div>
-			<p class="lp-text">Choose your perfect dish using the extracted information from each recipe. Make your selection based on <span class="bold-text">prep and cook times, dietary restrictions, ingredients, cuisine, cooking instructions and more!</span></p>
-		</div>
-		<div class="lp-section">
-			<div class="image-container" id="image-3">
-				<h2 class="lp-label">Build</h2>
+			<div class="info-container">
+				<p><span class="info-label">Cuisine:</span> American</p>
+				<p><span class="info-label">Diet:</span> Vegan, vegetarian</p>
+				<p><span class="info-label">Ingredients:</span> Soy meat, bread, lettuce, tomatoes, onions, avocado, vegan aioli</p>
+				<p><span class="info-label">Prep time:</span> 30 min.</p>
 			</div>
-			<p class="lp-text">After choosing your recipe, <span class="bold-text">visit the website</span>, or immediately extract and <span class="bold-text">add the ingredients to the GoVeg shopping list</span>. Save the list via email or text to access it later. Happy shopping!</p>
+			<div class="clear"></div>
 		</div>
+
+
+		<div class="search-result" role="region">
+			<h2 class="result-title">Veggie Burger 5</h2>
+			<div class="image-container">
+				<img src="img/veggie-burger-5.svg" alt="a veggie burger" class="result-image">
+			</div>
+			<div class="info-container">
+				<p><span class="info-label">Cuisine:</span> American</p>
+				<p><span class="info-label">Diet:</span> Vegan, vegetarian</p>
+				<p><span class="info-label">Ingredients:</span> Soy meat, bread, tomatoes, onions, lettuce, vegan aioli</p>
+				<p><span class="info-label">Prep time:</span> 42 min.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="search-result" role="region">
+			<h2 class="result-title">Veggie Burger 6</h2>
+			<div class="image-container">
+				<img src="img/veggie-burger-6.svg" alt="a veggie burger" class="result-image">
+			</div>
+			<div class="info-container">
+				<p><span class="info-label">Cuisine:</span> American</p>
+				<p><span class="info-label">Diet:</span> Vegan, vegetarian</p>
+				<p><span class="info-label">Ingredients:</span> Black bean and corn burger, bread, lettuce, tomeatoes, onions, cucumber</p>
+				<p><span class="info-label">Prep time:</span> 34 min.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+	
+		<div class="nav-buttons" role="navigation">
+			<button class="button-style" id="back-button" type="button" id="#">< Back</button>
+			<button class="button-style" id="next-button" type="button" id="#">Next ></button>
+		</div>
+
+		<div class="footer-container" role="contentinfo"></div>
 	</div>
 
-	<div class="footer-container" role="contentinfo"></div>
+	<div id="page-3" hidden>
+		<div class="non-linear-container" role="banner">
+			<header>
+				<a href="index.html">
+					<img id="site-logo" src="img/goveg-logo.svg" alt="vector logo of a leaf">
+				</a>
+				<p id="site-title">GoVeg</p>
+				<p id="site-tagline">Healthy eating, simple living</p>
+			</header>
+		</div>
+
+		<div class="search-result-final" role="main">
+			<h2 class="result-title">Veggie Burger 4</h2>
+			<div class="image-container">
+				<img src="img/veggie-burger-4.svg" alt="a veggie burger" class="result-image">
+			</div>
+			<div class="info-container">
+				<p class="info-label">Cuisine</p>
+				<p class="info">American</p>
+				<p class="info-label">Diet</p>
+				<p class="info">Vegan, vegetarian</p>
+				<p class="info-label">Prep time</p>
+				<p class="info">30 min.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="ingredients-steps-container" role="region">
+			<div class="ingredients-container">
+				<div class="ingredients-heading-container">
+					<h2 class="ingredients-heading">Ingredients</h2>
+				</div>
+				<div class="ingredients-content-container">
+					<ul class="ingredients-content">
+						<li>Soy meat</li>
+						<li>Bread</li>
+						<li>Lettuce</li>
+						<li>Tomatoes</li>
+						<li>Onions</li>
+						<li>Avocado</li>
+						<li>Vegan Aioli</li>
+					</ul>
+				</div>
+			</div>
+			<div class="steps-container">
+				<div class="steps-heading-container">
+					<h2 class="steps-heading">Steps</h2>
+				</div>
+				<div class="steps-content-container">
+					<ol class="steps-content">
+						<li> Press soy meat into a burger shaped patty.</li>
+						<li> Put the patty on a non-stick pan and into the oven at 375 degrees F for 12 minutes.</li>
+						<li> Cut vegetables and prepare bun with aioli.</li>
+						<li> Remove patty from oven. Assemble burger.</li>
+						<li> Enjoy</li>
+					</ol>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	
+		<div role="navigation">
+			<div class="nav-buttons">
+				<button class="button-style" type="button">< Return</button>
+				<button class="button-style" type="button">New Search</button>
+			</div>
+			<div class="nav-buttons">
+				<button class="button-style-2" id="return-button" type="button">Visit Website</button>
+			</div>
+		</div>
+
+		<div class="footer-container" role="contentinfo"></div>
+	</div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
