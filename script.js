@@ -1,4 +1,4 @@
-const RECIPE_COMPLEX_URL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex";
+// const RECIPE_COMPLEX_URL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex";
 
 $('.search-form').submit(function (event) {
 	event.preventDefault();
@@ -7,10 +7,12 @@ $('.search-form').submit(function (event) {
 	let query = $('#query').val();
 	getDataFromApi(query);
 })
+
 $('.search-result').click(function(event) {
 	$('#page-2').hide();
 	$('#page-3').show();
 })
+
 function getDataFromApi(query) {
   const settings = {
     url: RECIPE_COMPLEX_URL,

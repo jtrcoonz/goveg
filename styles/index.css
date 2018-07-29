@@ -11,6 +11,12 @@ body {
   height: 100%;
   background: linear-gradient(rgba(27, 244, 127, 1), rgba(27, 244, 127, 0.1));
 }
+.non-linear-container {
+  height: 90px;
+  width: 100%;
+  background-color: rgba(27, 244, 127, 1);
+  margin-bottom: 20px;
+}
 header {
   margin-left: 75px;
   padding-top: 25px;
@@ -27,16 +33,37 @@ header {
   color: white;
 }
 #site-tagline {
-  font-weight: 200;
-  font-size: 16px;
-  color: white;
-  margin-left: 30px;
+  display: none;
 }
 .search-form {
   margin-top: 20px;
   margin: 0 auto;
   width: 90%;
   max-width: 500px;
+}
+.search-result {
+  width: 90%;
+  margin: 30px auto;
+  max-width: 600px;
+}
+.search-result:hover {
+  border: 1px solid black;
+}
+.search-result > h2 {
+  text-align: center;
+}
+.search-result-final {
+  margin: 30px auto;
+  max-width: 450px;
+}
+.search-result-final > h2 {
+  text-align: center;
+}
+.result-title {
+  color: rgba(27, 244, 127, 1);
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .param-label {
   display: block;
@@ -111,6 +138,22 @@ header {
   text-align: center;
   max-width: 1030px;
 }
+.image-container-2 {
+  width: 20%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.image-container-2 > img {
+  width: 100%;
+}
+.image-container-3 {
+  width: 50%;
+  display: inline-block;
+}
+.image-container-3 > img {
+  width: 100%;
+  max-height: 200px;
+}
 #image-1 {
   background-image: url("../img/goveg-search.png");
 }
@@ -144,14 +187,134 @@ header {
   background-color: rgba(27, 244, 127, 1);
   margin-top: 30px;
 }
-@media only screen and (min-width: 370px) {
-  .checkbox-column-33 li {
-    width: 33%;
+.info-container {
+  width: 80%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: left;
+  float: right;
+  height: 100%;
+  padding-left: 20px;
+}
+.info-container-2 {
+  width: 50%;
+  box-sizing: border-box;
+  float: right;
+  text-align: center;
+}
+.info-label {
+  color: rgba(27, 244, 127, 1);
+  font-size: 20px;
+}
+.info {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: rgba(13, 35, 23, 1);
+}
+.clear {
+  clear: both;
+}
+.ingredients-steps-container {
+  max-width: 350px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ingredients-heading-container, .steps-heading-container {
+  text-align: center;
+}
+.ingredients-heading, .steps-heading {
+  color: rgba(27, 244, 127, 1);
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.ingredients-content-container, .steps-content-container {
+  text-align: center;
+  max-width: 100%;
+}
+.ingredients-content, .steps-content {
+  list-style-position: inside;
+  padding: 0;
+}
+.ingredients-content > li, .steps-content > li {
+  color: rgba(13, 35, 23, 1);
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+.nav-buttons {
+  text-align: center;
+  width: 100%;
+}
+.button-style {
+  font-size: 26px;
+  color: white;
+  background-color: rgba(27, 244, 127, 1);
+  margin: 20px 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  font-weight: 250;
+  letter-spacing: 1px;
+  display: inline-block;
+  width: 45%;
+  max-width: 290px;
+}
+.button-style-2 {
+  font-size: 26px;
+  color: white;
+  background-color: rgba(27, 244, 127, 1);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  font-weight: 250;
+  letter-spacing: 1px;
+  display: block;
+  width: 290px;
+  max-width: 290px;
+  margin: 10px auto;
+  white-space: nowrap;
+}
+.button-style-3 {
+  font-size: 26px;
+  color: white;
+  background-color: rgba(27, 244, 127, 1);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  font-weight: 250;
+  letter-spacing: 1px;
+  width: 290px;
+  text-align: center;
+}
+#back-button {
+  margin-right: 5px;
+}
+#next-button {
+  margin-left: 5px;
+}
+#return-button {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 290px) {
+  .ingredients-container {
+    width: 50%;
+    display: inline-block;
+  }
+  .steps-container {
+    width: 50%;
+    display: inline-block;
+    float: right;
   }
 }
-@media only screen and (min-width: 1030px) {
-  .lp-sections {
-    background: linear-gradient(rgba(27, 244, 127, 0.1), rgba(27, 244, 127, 0));
+@media only screen and (min-width: 345px) {
+  #site-tagline {
+    font-weight: 200;
+    font-size: 16px;
+    color: white;
+    margin-left: 30px;
+    display: block;
   }
 }
 @media only screen and (min-width: 350px) {
@@ -161,5 +324,45 @@ header {
     top: 15px;
     padding-right: 280px;
     padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 370px) {
+  .checkbox-column-33 li {
+    width: 33%;
+  }
+}
+@media only screen and (min-width: 410px) {
+  .nav-buttons {
+    text-align: center;
+    width: 100%;
+  }
+  .button-style-2 {
+    font-size: 26px;
+    color: white;
+    background-color: rgba(27, 244, 127, 1);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 4px;
+    font-weight: 250;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: 45%;
+    max-width: 290px;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .ingredients-steps-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .search-result {
+    margin: 30px auto;
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1030px) {
+  .lp-sections {
+    background: linear-gradient(rgba(27, 244, 127, 0.1), rgba(27, 244, 127, 0));
   }
 }
