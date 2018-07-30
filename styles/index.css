@@ -41,15 +41,15 @@ header {
   width: 90%;
   max-width: 500px;
 }
-.search-result {
+.result {
   width: 90%;
   margin: 30px auto;
   max-width: 600px;
 }
-.search-result:hover {
+.result:hover {
   border: 1px solid black;
 }
-.search-result > h2 {
+.result > h2 {
   text-align: center;
 }
 .search-result-final {
@@ -356,9 +356,9 @@ header {
     max-width: 600px;
     margin: 0 auto;
   }
-  .search-result {
+  .result {
     margin: 30px auto;
-    max-width: 600px;
+    max-width: 800px;
   }
 }
 @media only screen and (min-width: 1030px) {
