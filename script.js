@@ -12,22 +12,48 @@ $('.search-form').submit(function (event) {
 $('.search-results').on('click', '.result', function(event) {
   let selectedIndex = $(event.currentTarget).attr('data-index');
   let recipe = recipes[selectedIndex];
+  const ingredients = recipe.missedIngredients.map((item, index) => item.name);
+  const instructions = recipe.analyzedInstructions['0'].steps.map((item, index) => `<li>${item.step}</li>`)
   console.log(recipe);
   $('.search-result-final').html(`
     <h2 class="result-title">${recipe.title}</h2>
     <div class="image-container-3">
-      <img src="img/veggie-burger-4.svg" alt="a veggie burger" class="result-image">
+      <img src=${recipe.image} alt="search result image" class="result-image">
     </div>
     <div class="info-container-2">
       <p class="info-label">Cuisine</p>
-      <p class="info">American</p>
+      <p class="info">${recipe.cuisines.join(', ')}</p>
       <p class="info-label">Diet</p>
-      <p class="info">Vegan, vegetarian</p>
-      <p class="info-label">Prep time</p>
-      <p class="info">30 min.</p>
+      <p class="info">${recipe.diets.join(', ')}</p>
+      <p class="info-label">Ready in</p>
+      <p class="info">${recipe.readyInMinutes} min.</p>
     </div>
     <div class="clear"></div>
-    `)
+  `)
+  $('.ingredients-steps-container').html(`
+    <div class="ingredients-container">
+      <div class="ingredients-heading-container">
+        <h2 class="ingredients-heading">Ingredients</h2>
+      </div>
+      <div class="ingredients-content-container">
+        <ul class="ingredients-content">
+          <p>${ingredients.join(',  ')}</p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-container">
+      <div class="steps-heading-container">
+        <h2 class="steps-heading">Steps</h2>
+      </div>
+      <div class="steps-content-container">
+        <ol class="steps-content">
+          ${instructions.join(' ')}
+        </ol>
+      </div>
+    </div>
+    <div class="clear"></div>
+  `)
 	$('#page-2').hide();
 	$('#page-3').show();
 })
