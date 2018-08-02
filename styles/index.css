@@ -1,4 +1,5 @@
-*, html {
+*,
+html {
   margin: 0;
 }
 body {
@@ -6,7 +7,10 @@ body {
   font-weight: 300;
   letter-spacing: 0.5px;
 }
-html, body, #page-2, #page-3 {
+html,
+body,
+#page-2,
+#page-3 {
   height: 100%;
 }
 .lp-main {
@@ -226,10 +230,12 @@ header {
   padding-right: 20px;
   padding-bottom: 15px;
 }
-.ingredients-heading-container, .steps-heading-container {
+.ingredients-heading-container,
+.steps-heading-container {
   text-align: center;
 }
-.ingredients-heading, .steps-heading {
+.ingredients-heading,
+.steps-heading {
   color: rgba(27, 244, 127, 1);
   font-weight: 300;
   margin-bottom: 10px;
@@ -242,11 +248,13 @@ header {
 .steps-content-container {
   text-align: left;
 }
-.ingredients-content, .steps-content {
+.ingredients-content,
+.steps-content {
   list-style-position: inside;
   padding: 0;
 }
-.ingredients-content > p, .steps-content > li {
+.ingredients-content > p,
+.steps-content > li {
   color: rgba(13, 35, 23, 1);
   font-size: 18px;
   margin-bottom: 20px;
@@ -315,9 +323,14 @@ header {
   margin-top: 30px;
   text-align: center;
 }
-.footer-content, .footer-content > a {
+.footer-content,
+.footer-content > a {
   color: white;
   font-size: 15px;
+}
+
+.search-results {
+  min-height: 90%;
 }
 @media only screen and (min-width: 345px) {
   #site-tagline {
