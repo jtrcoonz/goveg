@@ -83,6 +83,7 @@ function getDataFromApi(query) {
 
 function displayRecipeSearchData(data) {
   recipes = data.results;
+  console.log(data);
   const results = recipes.map((item, index) => renderResult(item, index));
   $('.search-results').html(results);
 }
