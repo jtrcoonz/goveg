@@ -30,10 +30,26 @@ $(".search-form").submit(function(event) {
 });
 
 $("#next-button").click(function(event) {
-  console.log("button");
   event.preventDefault();
   queryObject.offset = queryObject.offset + 10;
   getDataFromApi();
+});
+
+$("#back-button").click(function(event) {
+  event.preventDefault();
+  queryObject.offset = queryObject.offset - 10;
+  getDataFromApi();
+});
+
+$(".nav-buttons-2").on("click", "#return-button", function(event) {
+  event.preventDefault();
+  $("#page-3").hide();
+  $("#page-2").show();
+});
+
+$(".nav-buttons-2").on("click", "#new-search-button", function(event) {
+  event.preventDefault();
+  location.href="index.html";
 });
 
 $(".search-results").on("click", ".result", function(event) {
@@ -88,8 +104,11 @@ $(".search-results").on("click", ".result", function(event) {
 });
 
 function getDataFromApi(query, cuisine, diet, selectedIntolerances) {
-  $(".search-results").html("<div>LOADING GIF HERE</div>");
-  $(".nav-buttons").show();
+  $(".search-results").html(`
+    <div class="loading-gif">
+      <img src="https://www.hancocks.co.uk/skin/frontend/rwd/hancocks/images/warehouse/cw-loader1.gif" height="200px" width="200px">
+    </div>
+  `);
 
   const settings = {
     url: RECIPE_COMPLEX_URL,
@@ -113,10 +132,10 @@ function displayRecipeSearchData(data) {
   console.log(data);
   const results = recipes.map((item, index) => renderResult(item, index));
   $(".search-results").html(results);
+  $(".nav-buttons").show()
 }
 
 function renderResult(result, index) {
-  // console.log(result);
   const ingredients = result.missedIngredients.map((item, index) => item.name);
   return `
     <div data-index="${index}" class="result">
@@ -144,3 +163,4 @@ function renderResult(result, index) {
     </div>
   `;
 }
+

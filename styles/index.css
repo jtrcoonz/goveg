@@ -260,7 +260,8 @@ header {
   margin-bottom: 20px;
   font-weight: 200;
 }
-.nav-buttons {
+.nav-buttons,
+.nav-buttons-2 {
   text-align: center;
   width: 100%;
 }
@@ -311,7 +312,7 @@ header {
 #next-button {
   margin-left: 5px;
 }
-#return-button {
+#site-button {
   margin-bottom: 20px;
 }
 .footer-container {
@@ -331,6 +332,9 @@ header {
 
 .search-results {
   min-height: 90%;
+}
+.loading-gif {
+  text-align: center;
 }
 @media only screen and (min-width: 345px) {
   #site-tagline {
@@ -356,10 +360,6 @@ header {
   }
 }
 @media only screen and (min-width: 410px) {
-  .nav-buttons {
-    text-align: center;
-    width: 100%;
-  }
   .button-style-2 {
     font-size: 26px;
     color: white;
