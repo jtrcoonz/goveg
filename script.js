@@ -27,17 +27,24 @@ $(".search-form").submit(function(event) {
     ", "
   );
   getDataFromApi();
+  $("#back-button").hide();
 });
 
 $("#next-button").click(function(event) {
   event.preventDefault();
   queryObject.offset = queryObject.offset + 10;
+  if (queryObject.offset > 0) {
+    $("#back-button").show();
+  }
   getDataFromApi();
 });
 
 $("#back-button").click(function(event) {
   event.preventDefault();
   queryObject.offset = queryObject.offset - 10;
+  if (queryObject.offset === 0) {
+    $("#back-button").hide();
+  };
   getDataFromApi();
 });
 
@@ -59,7 +66,6 @@ $(".search-results").on("click", ".result", function(event) {
   const instructions = recipe.analyzedInstructions["0"].steps.map(
     (item, index) => `<li>${item.step}</li>`
   );
-
   $(".search-result-final").html(`
     <h2 class="result-title">${recipe.title}</h2>
     <div class="image-container-3">
@@ -97,11 +103,18 @@ $(".search-results").on("click", ".result", function(event) {
         </ol>
       </div>
     </div>
+    
+    <div class="link-container">
+      <a id="site-link" href=${recipe.sourceUrl} target="_blank">Visit Website</a>
+    </div>
+
     <div class="clear"></div>
   `);
   $("#page-2").hide();
   $("#page-3").show();
 });
+
+
 
 function getDataFromApi(query, cuisine, diet, selectedIntolerances) {
   $(".search-results").html(`
@@ -132,7 +145,7 @@ function displayRecipeSearchData(data) {
   console.log(data);
   const results = recipes.map((item, index) => renderResult(item, index));
   $(".search-results").html(results);
-  $(".nav-buttons").show()
+  $(".nav-buttons").show();
 }
 
 function renderResult(result, index) {
@@ -163,4 +176,3 @@ function renderResult(result, index) {
     </div>
   `;
 }
-

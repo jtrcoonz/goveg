@@ -312,8 +312,13 @@ header {
 #next-button {
   margin-left: 5px;
 }
-#site-button {
-  margin-bottom: 20px;
+.link-container {
+  text-align: center;
+}
+#site-link,
+#site-link:visited {
+  color: rgba(27, 244, 127, 1);
+  font-size: 20px;
 }
 .footer-container {
   background-color: rgba(27, 244, 127, 1);
