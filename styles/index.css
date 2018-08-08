@@ -71,7 +71,7 @@ header {
   text-align: center;
 }
 .result-image {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 .result-title {
   color: rgba(24, 216, 112, 1);
