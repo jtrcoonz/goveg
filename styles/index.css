@@ -53,6 +53,11 @@ header {
   margin: 30px auto;
   max-width: 600px;
   padding: 10px;
+  border: 5px solid white;
+  -webkit-transition : border 500ms ease-out; 
+  -moz-transition : border 500ms ease-out;
+  -o-transition : border 500ms ease-out;
+
 }
 .result:hover {
   border: 5px solid rgba(24, 216, 112, 1);
